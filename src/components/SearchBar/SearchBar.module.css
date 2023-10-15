@@ -1,0 +1,44 @@
+.form {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid #666;
+  border-radius: 10px;
+}
+
+.search-submit-btn {
+  margin-left: 20px;
+  height: 40px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.search-submit-btn:hover {
+  color: #eee;
+  background-color: #333;
+}
+
+.btn { 
+  margin: 10px 0;
+  padding: 5px;
+  width: 100px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #666;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #eee;
+  background-color: #333;
+}
