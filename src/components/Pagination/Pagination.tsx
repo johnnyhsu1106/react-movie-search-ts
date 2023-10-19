@@ -12,7 +12,7 @@ const Pagination = () => {
     handleNavButtonClick
   } = useMovieSearchContext();
 
-  if (numOfResults === 0) {
+  if (numOfResults === undefined) {
     return null;
   }
 

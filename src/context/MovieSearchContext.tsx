@@ -8,7 +8,7 @@ interface IMovieSearchContext {
   currBucket: number;
   lastBucket: number;
   numOfPages: number;
-  numOfResults: number;
+  numOfResults: number | undefined;
   isLoading: boolean;
   isError: boolean;
   PAGE_PER_BUCKET: number;
@@ -54,7 +54,7 @@ const MovieSearchProvider = ({ children }: MovieSearchProviderProps) => {
   const [isError, setIsError] = useState<boolean>(false);
 
   const numOfPages: number = data?.total_pages || 0; 
-  const numOfResults: number = data?.total_results || 0;
+  const numOfResults: number | undefined = data?.total_results;
   const movies: IMovie[] = data?.results?.map((result) => { return result }) || [];
   const currBucket: number = currPageNum !== 0 ? Math.floor((currPageNum - 1) / PAGE_PER_BUCKET) + 1 : 0;
   const lastBucket: number = numOfPages !== undefined ? Math.floor((numOfPages - 1) / PAGE_PER_BUCKET) + 1 : 0;

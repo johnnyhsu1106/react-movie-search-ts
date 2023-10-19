@@ -1,6 +1,7 @@
 .form {
   margin-bottom: 20px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
@@ -41,4 +42,14 @@
 .btn:hover {
   color: #eee;
   background-color: #333;
+}
+
+@media screen and (max-width: 640px) {
+  .search-bar {
+    width: 250px;
+  } 
+  .search-submit-btn {
+    font-size: 16px;
+    width: 80px; 
+  }
 }
